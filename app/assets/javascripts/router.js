@@ -6,6 +6,7 @@ Emberjs1.Router.map(function() {
   this.route("about", {path: "/about"});
   this.route("users", {path: "/users"});
   this.route("locations", {path: "/locations"});
+  this.route("books", {path: "/books"});
 
 
 });

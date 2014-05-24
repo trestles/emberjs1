@@ -1,4 +1,10 @@
 Emberjs1::Application.routes.draw do
+    scope '/v1' do
+      scope '/api' do
+        # get_location_by_global_id
+        resources :books, only: [:index], :controller => "api_books"
+      end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
