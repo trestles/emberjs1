@@ -18,6 +18,7 @@
           <p>{{view.content}}</p>
         </div>
         <div class="modal-footer">
+          <button type="button" {{action saveChanges target="view"}} class="btn btn-default">Save</button>
           <button type="button" {{action close target="view"}} class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
@@ -49,11 +50,6 @@
 <div class="container main-cntnr">
 <%= yield %>
 <div id="app"></div>
-<div id='tmp-modal'></div>
-	<div class='jt'></div>
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target=".jt">
-  Launch demo modal
-</button>
 </div>
 </body>
   <%= javascript_include_tag "application" %>

@@ -9,12 +9,22 @@ Emberjs1.ModalView = Ember.View.extend({
     },
     // modal dismissed by example clicked in X, make sure the modal view is destroyed
     _viewDidHide: function() {
+         alert('called _viewDidHide');
         if (!this.isDestroyed) {
             this.destroy();
         }
     },
     // here we click in close button so _viewDidHide is called
     close: function() {        
+        alert('you want to close');
         this.$(".close").click();
+    },
+    actions:{
+    saveChanges: function() {        
+        //this.$(".close").click();
+        alert('you are about to save');
     }
+}
+
+
 });
