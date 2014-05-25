@@ -1,5 +1,5 @@
 <div>
 {{#each}}
-  <div class='row'>{{name}}  <button {{action 'sayHello'}}>say hello</button></div> <a {{action showModal}} href="#">Open modal</a>
+  <div class='row'>{{name}}  <button {{action 'sayHello'}}>say hello</button></div> <a {{action showModal this}} href="#">Open modal</a>
 {{/each}}
 </div>
