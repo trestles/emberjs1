@@ -6,6 +6,8 @@ class Book < ActiveRecord::Base
   	#rake db:drop RAILS_ENV=test
     ActiveRecord::Base.connection.execute("delete from books")
     ActiveRecord::Base.connection.execute("delete from ideas")
+    ActiveRecord::Base.connection.execute("delete from locations")
+
     b1=Book.create! name:"Introduction to Probality", author:"Bertsekas and Tsitsiklis"
     b2=Book.create! name:"Discrete Mathematics with Applications", author:"Susanna Epp"
     i1=Idea.create! name:"uncertainty", ref: "p2", detail:"", book_id: b1.id
@@ -52,6 +54,9 @@ class Book < ActiveRecord::Base
     Idea.create! name:"Markov Chain Summary and Discussion", ref: "p378", detail:"", book_id: b1.id
     Idea.create! name:"Noisy Channel", ref: "p410", detail:"", book_id: b1.id
 
+    Location.create! name: "Lucques jt"
+    Location.create! name: "AOC jt"
+    Location.create! name: "Providence jt"
 
   end	
 

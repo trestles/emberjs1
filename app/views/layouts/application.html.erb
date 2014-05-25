@@ -3,13 +3,81 @@
 <head>
   <title>Emberjs1</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<script type="text/x-handlebars" data-template-name="modal">
+<!-- Modal -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">{{view.title}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{view.content}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" {{action close target="view"}} class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->  
+</script>
+
+<script type='text/x-handlerbars' id='first-modal'>	
+
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</script>	
 <div class="container main-cntnr">
 <%= yield %>
 <div id="app"></div>
+<div id='tmp-modal'></div>
+	<div class='jt'></div>
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target=".jt">
+  Launch demo modal
+</button>
 </div>
 </body>
+  <%= javascript_include_tag "application" %>
+<script>
+ $(document).ready(function(){
+ 	/*
+   $('body').on('click','.show_modal', function(){
+     //alert('you clicked');
+       var source   = $("#first-modal").html();
+      var template = Handlebars.compile(source);
+      var html    = template();
+      console.log(html);
+
+      //$('.jt').html("what i'm thinking");	
+
+      $('#tmp-modal').html(html);	
+      $('#tmp-modal').modal('show');	
+      $('.jt').html(html);	
+      $('.jt').modal('show');	
+
+   });
+*/
+ });
+
+</script>
+
 </html>
