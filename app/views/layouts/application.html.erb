@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Emberjs1</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="container main-cntnr">
 <%= yield %>
-
+<div id="app"></div>
+</div>
 </body>
 </html>

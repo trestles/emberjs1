@@ -21,6 +21,8 @@
 //= require ./emberjs1
 
 // for more details see: http://emberjs.com/guides/application/
-Emberjs1 = Ember.Application.create();
+Emberjs1 = Ember.Application.create({
+rootElement: '#app'
+});
 
 //= require_tree .

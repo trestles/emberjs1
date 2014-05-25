@@ -42,6 +42,15 @@ class Book < ActiveRecord::Base
     Idea.create! name:"Birth-Death Processes", ref: "p359", detail:"a birth-death process is a Markov chain in which the states are linearly arranged and transitions can only occur to a neighboring state, or else leave the state unchanged", book_id: b1.id
     Idea.create! name:"buffer size in queuing theory", ref: "p362", detail:"", book_id: b1.id
     Idea.create! name:"Gambler's Ruin", ref: "p364", detail:"", book_id: b1.id
+    Idea.create! name:"Equations for Mean First Passage and Recurrence Times", ref: "p369", detail:"", book_id: b1.id
+    Idea.create! name:"Poisson Processes", ref: "p369", detail:"", book_id: b1.id
+    Idea.create! name:"embedded Markov Chain", ref: "p370", detail:"", book_id: b1.id
+    Idea.create! name:"continuous-time Markov Chain and a corresponding discrete-time version", ref: "p372", detail:"", book_id: b1.id
+    Idea.create! name:"packet / queueing", ref: "p373", detail:"", book_id: b1.id
+    Idea.create! name:"Steady-State Convergence Theorem", ref: "p375", detail:"", book_id: b1.id
+    Idea.create! name:"local balance equations", ref: "p375", detail:"", book_id: b1.id
+    Idea.create! name:"Markov Chain Summary and Discussion", ref: "p378", detail:"", book_id: b1.id
+    Idea.create! name:"Noisy Channel", ref: "p410", detail:"", book_id: b1.id
 
 
   end	
