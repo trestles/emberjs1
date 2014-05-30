@@ -11,6 +11,7 @@ class Book < ActiveRecord::Base
     b1=Book.create! name:"Introduction to Probality", author:"Bertsekas and Tsitsiklis"
     b2=Book.create! name:"Discrete Mathematics with Applications", author:"Susanna Epp"
     b3=Book.create! name:"Bayes' Rule", author:"James Stone"
+    b4=Book.create! name:"Coding the Matrix", author:"Phillip Klein"
 
     i1=Idea.create! name:"uncertainty", ref: "p2", detail:"", book_id: b1.id
     i2=Idea.create! name:"set elements", ref: "p3", detail:"", book_id: b1.id
@@ -55,6 +56,46 @@ class Book < ActiveRecord::Base
     Idea.create! name:"local balance equations", ref: "p375", detail:"", book_id: b1.id
     Idea.create! name:"Markov Chain Summary and Discussion", ref: "p378", detail:"", book_id: b1.id
     Idea.create! name:"Noisy Channel", ref: "p410", detail:"", book_id: b1.id
+    Idea.create! name:"Ground Rules", ref: "p2", detail:"", book_id: b3.id
+    Idea.create! name:"Forkhandles", ref: "p16", detail:"", book_id: b3.id
+    Idea.create! name:"Flipping Coins", ref: "p21", detail:"", book_id: b3.id
+    Idea.create! name:"Light Craters", ref: "p25", detail:"", book_id: b3.id
+    Idea.create! name:"Forward and Inverse Probability", ref: "p27", detail:"", book_id: b3.id
+    Idea.create! name:"Probability as a Geometric Area", ref: "p34", detail:"", book_id: b3.id
+    Idea.create! name:"Bayes Rule from Venn Diagrams", ref: "p41", detail:"", book_id: b3.id
+    Idea.create! name:"Joint Probability Functions", ref: "p48", detail:"", book_id: b3.id
+    Idea.create! name:"Patient Questions", ref: "p52", detail:"", book_id: b3.id
+    Idea.create! name:"Conditional Probability", ref: "p58", detail:"", book_id: b3.id
+    Idea.create! name:"Likelihood Function", ref: "p60", detail:"", book_id: b3.id
+    Idea.create! name:"Arithmetic on Functions", ref: "p60", detail:"", book_id: b3.id
+
+    Idea.create! name:"The Vector", ref: "p63", detail:"", book_id: b4.id
+    Idea.create! name:"What is a vector?", ref: "p65", detail:"", book_id: b4.id
+    Idea.create! name:"Vectors are functions", ref: "p66", detail:"", book_id: b4.id
+    Idea.create! name:"What can we represent with vectors?", ref: "p68", detail:"", book_id: b4.id
+    Idea.create! name:"Vector addition", ref: "p69", detail:"", book_id: b4.id
+    Idea.create! name:"Scalar-vector multiplication", ref: "p72", detail:"", book_id: b4.id
+    Idea.create! name:"Combining vector addition and scalar multiplication", ref: "p72", detail:"", book_id: b4.id
+
+    Idea.create! name:"Dictionary-based representation of vectors", ref: "p80", detail:"", book_id: b4.id
+    Idea.create! name:"Dot-product", ref: "p89", detail:"", book_id: b4.id
+    Idea.create! name:"Lab: Comparing voting records using dot-product", ref: "p108", detail:"", book_id: b4.id
+
+    Idea.create! name:"Adjancy Matrix", ref: "p185", detail:"", book_id: b4.id
+    Idea.create! name:"Walks", ref: "p185", detail:"", book_id: b4.id
+    Idea.create! name:"Computing the Number of Walks", ref: "p186", detail:"", book_id: b4.id
+    Idea.create! name:"Matrix-matrix multiplication and functional composition", ref: "p187", detail:"", book_id: b4.id
+    Idea.create! name:"Inner product and outer product", ref: "p192", detail:"", book_id: b4.id
+    Idea.create! name:"The inverse of a linear function is linear", ref: "p193", detail:"", book_id: b4.id
+    Idea.create! name:"Lab: Error-correcting codes", ref: "p198", detail:"", book_id: b4.id
+    Idea.create! name:"Lab: Transformations in 2D Geometry", ref: "p198", detail:"", book_id: b4.id
+    Idea.create! name:"Coordinate Systems", ref: "p215", detail:"", book_id: b4.id
+    Idea.create! name:"First Look at lossy compression - 3 stategies", ref: "p215", detail:"", book_id: b4.id
+    Idea.create! name:"Modeling discrete dynamic processes", ref: "p451", detail:"", book_id: b4.id
+    Idea.create! name:"Diagonalization of the Fibonacci matrix", ref: "p454", detail:"", book_id: b4.id
+    Idea.create! name:"Markov Chains", ref: "p464", detail:"", book_id: b4.id
+    Idea.create! name:"The origins of linear programming", ref: "p492", detail:"", book_id: b4.id
+    Idea.create! name:"Geometry of linear programming: polyhedra and vertices", ref: "p494", detail:"", book_id: b4.id
 
     Location.create! name: "Lucques jt"
     Location.create! name: "AOC jt"
