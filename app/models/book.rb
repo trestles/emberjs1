@@ -10,6 +10,8 @@ class Book < ActiveRecord::Base
 
     b1=Book.create! name:"Introduction to Probality", author:"Bertsekas and Tsitsiklis"
     b2=Book.create! name:"Discrete Mathematics with Applications", author:"Susanna Epp"
+    b3=Book.create! name:"Bayes' Rule", author:"James Stone"
+
     i1=Idea.create! name:"uncertainty", ref: "p2", detail:"", book_id: b1.id
     i2=Idea.create! name:"set elements", ref: "p3", detail:"", book_id: b1.id
     i3=Idea.create! name:"univeral set", ref: "p3", detail:"", book_id: b1.id
